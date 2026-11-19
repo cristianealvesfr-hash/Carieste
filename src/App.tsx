@@ -4,10 +4,12 @@ import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { TermsOfUse } from "./pages/TermsOfUse";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { LgpdBanner } from "./components/LgpdBanner";
+import { ContentProtection } from "./components/ContentProtection";
 
 export function App() {
   return (
     <BrowserRouter>
+      <ContentProtection />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
