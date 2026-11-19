@@ -81,16 +81,22 @@ export function Hero() {
       </div>
 
       {/* Faixa com os procedimentos no tom principal da blusa */}
-      <div className="border-y border-[#B28E74]/60 bg-gradient-to-r from-[#C2A087] via-[#CEB099] to-[#C2A087] py-3.5">
-        <div className="animate-marquee items-center gap-8 text-sm font-bold uppercase tracking-[0.12em] text-[#3B2C22]">
-          {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map(
-            (item, i) => (
-              <span key={i} className="flex items-center gap-8 whitespace-nowrap">
-                <span>{item}</span>
-                <span className="text-[#5C4535]">•</span>
-              </span>
-            )
-          )}
+      <div className="w-full overflow-hidden border-y border-[#B28E74]/60 bg-gradient-to-r from-[#C2A087] via-[#CEB099] to-[#C2A087] py-3.5">
+        <div className="animate-marquee text-sm font-bold uppercase tracking-[0.12em] text-[#3B2C22]">
+          {[0, 1].map((track) => (
+            <div
+              key={track}
+              aria-hidden={track === 1}
+              className="flex shrink-0 items-center gap-8 pr-8"
+            >
+              {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
+                <span key={`${track}-${i}`} className="flex items-center gap-8 whitespace-nowrap">
+                  <span>{item}</span>
+                  <span className="text-[#5C4535]">•</span>
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

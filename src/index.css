@@ -21,25 +21,27 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee {
   display: flex;
+  flex-wrap: nowrap;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  will-change: transform;
+  animation: marquee 26s linear infinite;
 }
 
 @keyframes float-soft {
   0%, 100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translate3d(0, -5px, 0);
   }
 }
 
@@ -59,24 +61,16 @@
 }
 
 .animate-float-soft {
+  will-change: transform;
   animation: float-soft 3s ease-in-out infinite;
 }
 
 .animate-float-soft-delayed {
+  will-change: transform;
   animation: float-soft 3s ease-in-out 0.8s infinite;
 }
 
 .animate-pulse-halo {
+  will-change: transform, opacity;
   animation: pulse-halo 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none;
-  }
-  * {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
 }
