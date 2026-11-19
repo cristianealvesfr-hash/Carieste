@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dracarinesena.com.br/sitemap.xml
