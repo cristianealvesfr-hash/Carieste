@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dracarinesena.com.br/sitemap.xml
+Sitemap: https://www.dracarinesena.com.br/sitemap.xml
