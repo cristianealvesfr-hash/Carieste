@@ -34,6 +34,42 @@
   animation: marquee 28s linear infinite;
 }
 
+@keyframes float-soft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-halo {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.75;
+  }
+  70% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 3s ease-in-out infinite;
+}
+
+.animate-float-soft-delayed {
+  animation: float-soft 3s ease-in-out 0.8s infinite;
+}
+
+.animate-pulse-halo {
+  animation: pulse-halo 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;
