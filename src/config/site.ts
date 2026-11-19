@@ -61,6 +61,7 @@ export interface Procedure {
   subtitle: string;
   image: string;
   imageAlt: string;
+  imageAspect?: string;
   imagePosition?: string;
   showInResults?: boolean;
   description: string;
@@ -126,7 +127,8 @@ export const PROCEDURES: Procedure[] = [
     subtitle: "Renovação celular e estímulo de colágeno",
     image: "/images/servico-microagulhamento.jpg",
     imageAlt: "Dra. Carine Sena realizando procedimento de microagulhamento facial",
-    imagePosition: "object-[center_32%]",
+    imageAspect: "aspect-[3/4] md:aspect-[4/5]",
+    imagePosition: "object-[center_45%]",
     showInResults: false,
     description:
       "O microagulhamento facial é um procedimento estético minimamente invasivo que utiliza microagulhas finas para criar pequenas perfurações controladas na pele. Nosso protocolo inclui limpeza de pele antes do procedimento.",
@@ -146,7 +148,8 @@ export const PROCEDURES: Procedure[] = [
     subtitle: "Hidratação profunda com ácido hialurônico",
     image: "/images/servico-skinbooster.jpg",
     imageAlt: "Dra. Carine Sena realizando procedimento de skinbooster facial",
-    imagePosition: "object-[center_60%]",
+    imageAspect: "aspect-[4/5]",
+    imagePosition: "object-center",
     showInResults: false,
     description:
       "Aplicação de microinjeções de ácido hialurônico de baixa densidade (muito mais fluido que o de preenchimento) diretamente nas camadas mais profundas da derme. Promove uma hidratação profunda de dentro para fora, melhora a elasticidade, a firmeza, o viço e suaviza rugas finas, sem alterar o volume ou os traços do rosto.",

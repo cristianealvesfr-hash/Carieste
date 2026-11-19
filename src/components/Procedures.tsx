@@ -21,7 +21,9 @@ export function Procedures() {
               key={proc.id}
               className="flex w-full flex-col overflow-hidden rounded-2xl border border-dourado/60 bg-white transition-shadow hover:shadow-lg hover:shadow-marrom/10 md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)]"
             >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-champagne">
+              <div
+                className={`${proc.imageAspect || "aspect-[4/3]"} w-full overflow-hidden bg-champagne`}
+              >
                 <img
                   src={proc.image}
                   alt={proc.imageAlt}
